@@ -1,0 +1,70 @@
+/* Réinitialisation de la mise en page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style du corps de la page */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3; /* Arrière-plan gris clair */
+    color: #333; /* Texte noir */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: #0072b5; /* Bleu foncé */
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+    color: #fff; /* Texte blanc */
+    margin: 20px 0;
+}
+
+/* Style du paragraphe principal */
+main p {
+    font-size: 18px;
+    text-align: center;
+    color: #666; /* Texte gris */
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Style de l'image */
+main img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Style du pied de page */
+footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Style du bouton */
+.button {
+    background-color: #0074d9; /* Bleu */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #005689; /* Couleur légèrement plus sombre au survol */
+}

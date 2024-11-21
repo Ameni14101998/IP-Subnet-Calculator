@@ -1,0 +1,126 @@
+h1 {
+    font-size: 28px;
+    color: #0f66b1; /* Bleu */
+    text-align: center;
+    margin: 20px 0;
+}
+
+#ipForm {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 20px;
+    color: #135d9f; /* Bleu */
+}
+
+#adresse_ip {
+    padding: 8px;
+    font-size: 18px;
+    border: 2px solid #0074d9; /* Bleu */
+    border-radius: 10px;
+}
+
+#nombre_hotes {
+    padding: 8px;
+    font-size: 10px;
+    border: 2px solid #0074d9; /* Bleu */
+    border-radius: 10px;
+    width: 150px;
+}
+
+#decomposerButton {
+    font-size: 18px;
+    background-color: #0074d9; /* Bleu */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#decomposerButton:hover {
+    background-color: #0056b3; /* Bleu légèrement plus sombre au survol */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('adresse-ip.jpg');
+    background-size: cover; /* Assurez-vous que l'image couvre l'ensemble du formulaire */
+    background-position: center; /* Centrez l'image dans le formulaire */
+}
+
+header {
+    background-color: #0074d9; /* Bleu */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+table td,
+table th {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #b1d5f4; /* Bleu */
+    text-align: center;
+}
+
+button {
+    background-color: #0074d9; /* Bleu */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Bleu légèrement plus sombre au survol */
+}
+
+footer {
+    margin-top: 50px; /* Espacement entre le tableau et le pied de page */
+    text-align: center;
+}
+
+.icon-button {
+    cursor: pointer;
+    margin-right: 5px; /* Ajoutez une marge entre les icônes pour l'esthétique */
+}
+
+.small-icon {
+    width: 20px; /* Définissez la largeur souhaitée */
+    height: 25px; /* Définissez la hauteur souhaitée */
+}
+
+.export-button {
+    /* Ajoutez des styles CSS selon vos besoins */
+    color: #fff;
+    background-color: #28a745;
+    border: 1px solid #218838;
+    padding: 5px 10px;
+    text-decoration: none;
+}

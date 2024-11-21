@@ -1,0 +1,81 @@
+label {
+    font-size: 20px;
+    color: #0f66b1;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 28px;
+    color: rgb(127, 132, 135);
+    text-align: center;
+    margin: 20px 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('adresse-ip.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#nouveau_nombre_hotes {
+    padding: 8px;
+    font-size: 10px;
+    border: 2px solid #0074d9; /* Bleu */
+    border-radius: 10px;
+    width: 150px;
+    display: flex;
+    align-items: center; /* Centrage vertical */
+    justify-content: center;
+}

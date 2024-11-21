@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Décomposition d'adresses IP en sous-réseaux</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <h1>Décomposition d'adresses IP en sous-réseaux</h1>
+
+    <!-- Ajoutez cet élément à votre formulaire dans index.html -->
+    <form id="ipForm" method="POST" action="/decomposer_ip" onsubmit="return decomposerIP()">
+        <label for="adresse_ip">Adresse IP :</label>
+        <input type="text" id="adresse_ip" name="adresse_ip" required>
+        <label for="nombre_hotes">Nombre d'hôtes :</label>
+        <input type="number" id="nombre_hotes" name="nombre_hotes" required>
+        <button type="button" id="decomposerButton" onclick="decomposerIP()">Décomposer</button>
+        <p id="error" style="color: red;"></p>
+    </form>
+
+    <table>
+        <tr>
+            <th>Numéro de Sous-réseau</th>
+            <th>Adresse de Réseau</th>
+            <th>Masque de Sous-Réseau</th>
+            <th>Adresse de Diffusion</th>
+            <th>Première Adresse Disponible</th>
+            <th>Dernière Adresse Disponible</th>
+            <th>Adresses Disponibles</th>
+            <th>Actions</th>
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td id="numero{{ loop.index }}">{{ loop.index }}</td>
+            <td id="adresseReseau{{ loop.index }}">{{ result.adresse_reseau }}</td>
+            <td id="masque{{ loop.index }}">{{ result.masque_sous_reseau }}</td>
+            <td id="adresseDiffusion{{ loop.index }}">{{ result.adresse_diffusion }}</td>
+            <td id="premiereAdresse{{ loop.index }}">{{ result.premiere_adresse }}</td>
+            <td id="derniereAdresse{{ loop.index }}">{{ result.derniere_adresse }}</td>
+            <td id="adressesDisponibles{{ loop.index }}">{{ result.adresses_disponibles }}</td>
+            <td>
+                <!-- Ajoutez l'icône pour éditer -->
+                <img src="{{ url_for('static', filename='modifier.png') }}" class="icon-button small-icon" alt="Éditer" 
+                onclick="editerLigne('{{ result.adresse_reseau }}', '{{ result.adresses_disponibles }}')">
+                <!-- Ajoutez l'icône pour supprimer -->
+                <img src="{{ url_for('static', filename='supprimer.png') }}" class="icon-button small-icon" alt="Supprimer" onclick="supprimerLigne('{{ result.adresse_reseau }}')">
+                <!-- Ajoutez le lien d'exportation -->
+                <a href="{{ url_for('exporter_configuration', ip=result.adresse_reseau) }}" class="export-button">Exporter</a>
+            </td>            
+        </tr>
+        {% endfor %}
+    </table>
+
+    <footer>
+        <a href="accueil.html" class="button">
+            <i class="fas fa-home"></i> Retour à l'accueil
+        </a>
+    </footer>
+
+    <!-- Ajoutez cette balise script pour lier le fichier JavaScript externe -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

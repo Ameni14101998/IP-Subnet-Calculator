@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='images.jpg') }}">
+    <link rel="stylesheet" type="text/css" href="../static/acc.css">
+    <title>Gestion des Réseaux IP</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue dans l'outil de gestion des réseaux IP</h1>
+    </header>
+    <main>
+        <p>Cet outil simplifie la configuration et la gestion des réseaux IP</p>
+         <img src="{{ url_for('static', filename='images.jpg') }}" alt="Réseau IP">
+    </main>
+    <footer>
+        <a href="../templates/index.html" class="button">Accéder à l'outil</a>
+    </footer>
+</body>
+</html>
+
